@@ -2,9 +2,7 @@
 nums = []
 with open('day1-1-input.txt') as f:
     lines = f.readlines()
-    for line in lines:
-      nums.append(int(line.strip()))
-
+    nums = [int(line.strip()) for line in lines]
 
 # part 1
 part1count = 0
