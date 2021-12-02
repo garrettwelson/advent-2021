@@ -6,8 +6,7 @@ async function getArray() {
   return numbers.map((num) => Number(num));
 }
 
-async function question1() {
-  const numbers = await getArray();
+function question1(numbers) {
   return numbers.reduce((total, currentNum, idx, arr) => {
     if (idx === numbers.length - 1) {
       return total;
@@ -20,8 +19,7 @@ async function question1() {
   }, 0);
 }
 
-async function question2() {
-  const numbers = await getArray();
+function question2(numbers) {
   return numbers.reduce((total, currentNum, idx, arr) => {
     if (idx === numbers.length - 3) {
       return total;
@@ -36,6 +34,7 @@ async function question2() {
 }
 
 (async function main() {
-  console.log(await question1()); // 1451
-  console.log(await question2()); // 1395
+  const data = await getArray();
+  console.log(question1(data)); // 1451
+  console.log(question2(data)); // 1395
 })();

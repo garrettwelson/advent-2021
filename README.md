@@ -10,11 +10,6 @@ My solutions for Advent of Code, 2021. Will likely be using a mix of languages, 
 
 _Warning, these contain spoilers for Advent of Code_
 
-- [Day 1 - Solved - Python](/code/day1.py), [Day 1 - Solved - JavaScript](/code/day1.js)
-
-## Languages Used
-
-| Language   | Days Used              | Count |
-| ---------- | ---------------------- | ----- |
-| Python     | [Day 1](/code/day1.py) | 1     |
-| JavaScript | [Day1](/code/day1.js)  | 1     |
+- Day 1 - Solved:
+  - [Python](/code/day1.py)
+  - [JavaScript](/code/day1.js)
