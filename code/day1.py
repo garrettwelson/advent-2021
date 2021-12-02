@@ -1,6 +1,5 @@
 # process
-nums = []
-with open('day1-1-input.txt') as f:
+with open('inputs/1.txt') as f:
     lines = f.readlines()
     nums = [int(line.strip()) for line in lines]
 
@@ -18,27 +17,13 @@ print('part 1:', part1count)
 
 # part 2
 
-def validIndex(idx):
-  if idx < len(nums):
-    return True
-  return False
-
 def getWindow(idx):
-  sum = 0
-  if validIndex(idx):
-    sum += nums[idx]
-  if validIndex(idx+1):
-    sum += nums[idx+1]
-  if validIndex(idx+2):
-    sum += nums[idx+2]
-  return sum
+  return nums[idx] + nums[idx+1] + nums[idx+2]
 
 part2count = 0
 for index, num in enumerate(nums):
     if index == len(nums) - 3:
       break
-    currentWindow =0
-    nextWindow = 0
     currentWindow = getWindow(index)
     nextWindow = getWindow(index+1)
     if nextWindow  > currentWindow:
